@@ -1,0 +1,204 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: grey;
+}
+
+.wrapper {
+  width: 60vw;
+  margin: 1rem auto;
+}
+.logo {
+  margin: 1rem auto;
+  width: 20vw;
+  color: #c2bdbd;
+}
+.text {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  width: 96%;
+  flex-shrink: 0;
+}
+
+.label-wrapper:hover .image-wrapper {
+  transition: all 0.5s ease-out;
+  width: 25rem;
+  height: 25rem;
+  transform: scale(1);
+}
+.input {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+
+.wrapper:hover .text {
+  transition: all 0.5s ease-out;
+  color: rgb(84, 84, 240);
+}
+
+.input:checked ~ .label .image-wrapper {
+  transition: all 0.5s ease-out;
+  width: 25rem;
+  height: 25rem;
+  transform: scale(1);
+}
+
+.input:checked ~ .label .text {
+  color: #fff;
+}
+
+.image-wrapper {
+  transition: all 0.5s ease-out;
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+
+.icon-checkbox {
+  background-image: url('./assets/img/pngwing.png');
+  width: 1.8rem;
+  height: 1.8rem;
+  opacity: 0;
+}
+
+.label-wrapper {
+  border-top: 0.1rem solid rgb(94, 92, 92);
+}
+.label-wrapper,
+.reference-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.reference-wrapper {
+  width: 60vw;
+}
+.label-wrapper:has(.input:checked) .icon-checkbox {
+  transition: all 0.5s ease-out;
+  transform: rotate(45deg);
+}
+
+.label-wrapper:has(:not(.input:checked)) .icon-checkbox {
+  transition: all 0.5s ease-out;
+}
+
+.wrapper:hover .icon-checkbox {
+  opacity: 1;
+}
+
+.label-wrapper:hover .icon-checkbox {
+  transition: all 0.5s ease-out;
+  transform: rotate(45deg);
+}
+.first-img,
+.second-img,
+.third-img,
+.fourth-img,
+.icon-checkbox {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.first-img {
+  background-image: url('./assets/img/1.png');
+}
+
+.second-img {
+  background-image: url('./assets/img/2.png');
+}
+
+.third-img {
+  background-image: url('./assets/img/3.png');
+}
+
+.fourth-img {
+  background-image: url('./assets/img/4.png');
+}
+
+.wrapper:hover .reference-wrapper {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .wrapper:hover .reference-wrapper {
+    cursor: pointer;
+  }
+}
+@media (hover: none) {
+  .wrapper:hover .reference-wrapper {
+    cursor: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .text {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .logo {
+    width: 40vw;
+  }
+  .reference-wrapper {
+    width: 80vw;
+  }
+  .wrapper {
+    width: 80vw;
+  }
+  .text {
+    font-size: 1.3rem;
+    width: 96%;
+  }
+  .label-wrapper:hover .image-wrapper {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .input:checked ~ .label .image-wrapper {
+    width: 50vw;
+    height: 50vw;
+  }
+  .icon-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    width: 60vw;
+  }
+  .reference-wrapper {
+    width: 90vw;
+  }
+  .wrapper {
+    width: 90vw;
+  }
+  .text {
+    font-size: 1rem;
+  }
+  .label-wrapper:hover .image-wrapper {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .input:checked ~ .label .image-wrapper {
+    width: 70vw;
+    height: 70vw;
+  }
+  .icon-checkbox {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
