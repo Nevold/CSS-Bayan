@@ -124,3 +124,82 @@ body {
 .wrapper:hover .reference-wrapper {
   cursor: pointer;
 }
+
+@media (hover: hover) {
+  .wrapper:hover .reference-wrapper {
+    cursor: pointer;
+  }
+}
+@media (hover: none) {
+  .wrapper:hover .reference-wrapper {
+    cursor: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .text {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .logo {
+    width: 40vw;
+  }
+  .reference-wrapper {
+    width: 80vw;
+  }
+  .wrapper {
+    width: 80vw;
+  }
+  .text {
+    font-size: 1.3rem;
+    width: 96%;
+  }
+  .label-wrapper:hover .image-wrapper {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .input:checked ~ .label .image-wrapper {
+    width: 50vw;
+    height: 50vw;
+  }
+  .icon-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    width: 60vw;
+  }
+  .reference-wrapper {
+    width: 90vw;
+  }
+  .wrapper {
+    width: 90vw;
+  }
+  .text {
+    font-size: 1rem;
+    /* width: 96%; */
+  }
+  .label-wrapper:hover .image-wrapper {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .input:checked ~ .label .image-wrapper {
+    width: 70vw;
+    height: 70vw;
+  }
+  .icon-checkbox {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
