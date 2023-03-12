@@ -187,7 +187,6 @@ body {
   }
   .text {
     font-size: 1rem;
-    /* width: 96%; */
   }
   .label-wrapper:hover .image-wrapper {
     width: 70vw;
